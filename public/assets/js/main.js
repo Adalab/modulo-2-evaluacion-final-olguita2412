@@ -45,3 +45,4 @@ const handleSearch = (event) => {
 
 btnSearch.addEventListener('click', handleSearch);
 inputSearch.addEventListener('keyup', handleSearch);
+//# sourceMappingURL=main.js.map
