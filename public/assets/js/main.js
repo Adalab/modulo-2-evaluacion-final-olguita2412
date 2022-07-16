@@ -17,11 +17,16 @@ let favorites = [];
 
 const renderSeries = (arraySeries) => {
     let html = '';
-    
-
+    let classFavorite = '';
     for (const oneSerie of arraySeries) {
-
-        html += `<li class="js-serie" id="${oneSerie.mal_id}">`;
+        const favoritesFoundIndex = favorites.findIndex((fav) => fav.mal_id === oneSerie.mal_id);
+        console.log(favoritesFoundIndex);
+        if (favoritesFoundIndex !== -1){
+            classFavorite = 'serie--favorite';
+        } else {
+            classFavorite = '';
+        }
+        html += `<li class="js-serie serie ${classFavorite}" id="${oneSerie.mal_id}">`;
         html += `<h2>${oneSerie.title}</h2>`;
         if (oneSerie.images.jpg.image_url === "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"){
             oneSerie.images.jpg.image_url = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
@@ -43,9 +48,10 @@ const renderSeries = (arraySeries) => {
  const renderSeriesFavorites = () => { 
     let html = renderSeries(favorites);
     listFavorites.innerHTML = html;
-    listenerSerie();
+    //listenerSerie();
     console.log(favorites);
     localStorage.setItem('favorites', JSON.stringify(favorites));
+    renderSeriesSearch();
  }
 
 
@@ -69,18 +75,20 @@ const getDataAPI = (inputValue) => {
 }
 
 const handleClick = (event) => {
+   
     const idSelected = parseInt(event.currentTarget.id);
     const serieFound = series.find((oneSerie) => oneSerie.mal_id === idSelected);
    
     const favoriteFound = favorites.findIndex((fav) => fav.mal_id === idSelected);
 
-    favorites = dataLS;
+    
    
     if (favoriteFound === -1){
         favorites.push(serieFound);
     } else {
         favorites.splice(favoriteFound, 1);
     }
+    
     renderSeriesFavorites();
     
 }
@@ -95,10 +103,12 @@ function listenerSerie() {
 const dataLS = JSON.parse(localStorage.getItem('favorites'));
 
 function onLoad() {
-    
-    if (dataLS !== '') {
-        let html = renderSeries(dataLS);
-        listFavorites.innerHTML = html;
+    console.log(favorites);
+    if (dataLS !== null) {
+        favorites = dataLS;
+        
+        console.log(favorites);
+        renderSeriesFavorites();
     } else {
         listFavorites.innerHTML = '';
     }

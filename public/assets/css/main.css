@@ -11,4 +11,8 @@
   .list__favorites {
     width: 50vw; }
 
+.serie--favorite {
+  background-color: black;
+  color: white; }
+
 /*# sourceMappingURL=main.css.map */
