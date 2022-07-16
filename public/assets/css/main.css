@@ -3,6 +3,15 @@
   margin: 0;
   padding: 0; }
 
+:root {
+  font-size: 62.5%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
 .list {
   display: flex;
   flex-direction: row; }
@@ -14,5 +23,26 @@
 .serie--favorite {
   background-color: black;
   color: white; }
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-image: linear-gradient(to bottom, #ff8800, #e0b408, #9f2f14, #e0b408, #ff8800, #e0b408, #9f2f14); }
+  .header__img {
+    width: 20vw; }
+  .header__section {
+    color: white;
+    -webkit-animation: infinite;
+    animation: infinite; }
+    .header__section--title {
+      font-size: 4rem;
+      font-family: "Rubik Moonrocks", cursive;
+      text-transform: uppercase; }
+    .header__section--subtitle {
+      font-family: "Cormorant SC", serif;
+      font-size: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
