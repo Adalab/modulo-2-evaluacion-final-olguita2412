@@ -14,10 +14,12 @@ const resetFavorites = (html) => {
 // FUNCIÓN HANDLE PARA EL BOTÓN RESET FAVORITES
 
 const handleResetFavorites = () => {
-    let html = '';
-    listFavorites.innerHTML = html;
+    favorites = [];
+    let html= '';
+    renderSeriesFavorites();
     localStorage.clear('favorites');
     resetFavorites(html);
+    
 };
 
 
