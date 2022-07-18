@@ -1,11 +1,12 @@
+/* eslint-disable no-undef */
 'use strict';
 
 // FUNCIÓN HANDLE PARA BUSCAR
 
 const handleSearch = (event) => {
-    event.preventDefault();
-    const inputValue = inputSearch.value.toLowerCase();
-    getDataAPI(inputValue);
+  event.preventDefault();
+  const inputValue = inputSearch.value.toLowerCase();
+  getDataAPI(inputValue);
 };
 
 
