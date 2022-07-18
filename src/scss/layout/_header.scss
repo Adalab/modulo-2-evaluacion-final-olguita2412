@@ -21,7 +21,9 @@
             font-family: $font-subtitle-header;
             font-size: 2rem;
         } 
-        
+        &--span{
+            text-transform: capitalize;
+        }
         
     }
     
