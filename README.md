@@ -46,7 +46,7 @@ Use of HTML, SASS and JS.
 
 ### Demo:
 
-![Demo](./src/images/demo.mov)
+![Demo](./src/images/demo.gif)
 
 ---
 
