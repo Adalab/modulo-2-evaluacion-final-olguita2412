@@ -1,4 +1,4 @@
-<h1 align="center">{MIRANIME}</h1>
+<h1 align="center">MIRANIME</h1>
 
 ---
 
@@ -20,16 +20,14 @@
 
 ---
 
----
-
 ## Table of Contents
 
-1. [General-Info] (#general-info)
-2. [Technologies] (#technologies)
-3. [Installation] (#installation)
-4. [Result] (#result)
-5. [Contact] (#contact)
-6. [License] (#license)
+- [General Info](#general-info)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Result](#result)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
@@ -42,11 +40,11 @@ Use HTML, SASS and JS.
 
 ## Technologies
 
-- [Visual-Studio-Node] (https://code.visualstudio.com/download) Version: May 2022
-- [Git] (https://git-scm.com/download/mac) Version: 2.36.1
-- [Node-JS] (https://nodejs.org/es/download/) Version: v14.19.3
-- [Adalab-Web-Started-Kit] (https://github.com/Adalab/adalab-web-starter-kit)
-- [Git-Hub] (https://github.com/)
+- [Visual Studio Node](https://code.visualstudio.com/download) Version: May 2022
+- [Git](https://git-scm.com/download/mac) Version: 2.36.1
+- [Node JS](https://nodejs.org/es/download/) Version: v14.19.3
+- [Adalab Web Started Kit](https://github.com/Adalab/adalab-web-starter-kit)
+- [Git Hub](https://github.com/)
 
 ---
 
