@@ -46,7 +46,9 @@ Use of HTML, SASS and JS.
 
 ### Demo:
 
-![Demo](./src/images/demo.gif)
+<iframe width="800" height = "450"
+src="https://youtu.be/Ad86H9Vgx6g">
+</iframe>
 
 ---
 
