@@ -81,13 +81,3 @@ const renderSeriesFavorites = () => {
 
 // FUNCIÓN PARA CARGAR DATOS DE FAVORITES AL INICIAR LA PÁGINA
 
-function onLoad() {
-  if (dataLS !== null) {
-    favorites = dataLS;
-    renderSeriesFavorites();
-  } else {
-    listFavorites.innerHTML = '';
-  }
-}
-
-onLoad();
