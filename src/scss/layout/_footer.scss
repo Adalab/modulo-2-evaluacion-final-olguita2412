@@ -1,0 +1,10 @@
+.footer{
+    padding: 20px;
+    &__text {
+        text-align: center;
+        color: $color-third;
+        font-size: 1.2rem;
+        font-family: $font-main;
+
+    }
+}

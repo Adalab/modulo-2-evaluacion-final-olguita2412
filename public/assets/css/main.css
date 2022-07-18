@@ -19,7 +19,7 @@ li {
   justify-content: center;
   align-items: left;
   gap: 50px;
-  border-top: solid 1px #c7c7c7; }
+  border-top: solid 1px #b2b0b0; }
   .main__section {
     display: flex;
     flex-direction: row-reverse;
@@ -34,7 +34,7 @@ li {
   .main__title {
     font-size: 3.6rem;
     font-family: "Cormorant SC", serif;
-    color: white;
+    color: #fff2f2;
     width: 450px;
     text-align: center; }
     .main__title--span {
@@ -45,7 +45,7 @@ li {
     font-family: "Rubik Moonrocks", cursive;
     text-transform: uppercase;
     font-size: 2rem;
-    color: white; }
+    color: #fff2f2; }
 
 .list {
   display: flex;
@@ -61,7 +61,7 @@ li {
       font-family: "Rubik Moonrocks", cursive;
       font-size: 2.2rem;
       font-weight: 400;
-      color: white; }
+      color: #fff2f2; }
   .list__search {
     display: flex;
     flex-direction: row;
@@ -87,8 +87,8 @@ li {
   height: 350px;
   padding: 0px 15px;
   border-radius: 15px;
-  border: solid 1px white;
-  color: white; }
+  border: solid 1px #fff2f2;
+  color: #fff2f2; }
   .serie__title {
     font-size: 1.4rem;
     font-family: "Indie Flower", cursive;
@@ -98,8 +98,8 @@ li {
     width: 150px;
     height: 210px; }
   .serie--favorite {
-    background-color: white;
-    color: black; }
+    background-color: #fff2f2;
+    color: #434242; }
 
 .form {
   width: 60vw;
@@ -110,28 +110,28 @@ li {
     font-size: 1.8rem;
     text-decoration: underline;
     font-family: "Cormorant SC", serif;
-    color: #3e3e3e; }
+    color: #b2b0b0; }
   .form__input {
     width: 250px;
     font-size: 1.8rem;
     font-family: "Indie Flower", cursive;
     padding-left: 10px;
     border-radius: 10px;
-    border: solid 1px white;
-    color: #3e3e3e; }
+    border: solid 1px #fff2f2;
+    color: #b2b0b0; }
   .form__btn {
     width: 80px;
     font-size: 1.8rem;
     font-weight: 500;
     font-family: "Cormorant SC", serif;
-    background-color: white;
+    background-color: #fff2f2;
     border-radius: 40px;
-    border: solid 1px white;
-    color: #3e3e3e; }
+    border: solid 1px #fff2f2;
+    color: #434242; }
     .form__btn:hover {
       width: 100px;
       background-color: #9f2f14;
-      color: white; }
+      color: #fff2f2; }
 
 .header {
   min-height: 100vh;
@@ -153,6 +153,14 @@ li {
       font-size: 2rem; }
     .header__section--span {
       text-transform: capitalize; }
+
+.footer {
+  padding: 20px; }
+  .footer__text {
+    text-align: center;
+    color: #b2b0b0;
+    font-size: 1.2rem;
+    font-family: "Indie Flower", cursive; }
 
 .body {
   background-image: linear-gradient(to bottom, #ff8800, #e0b408, #9f2f14, #e0b408, #ff8800, #e0b408, #9f2f14);

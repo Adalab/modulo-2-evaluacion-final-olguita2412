@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: left;
     gap: 50px;
-    border-top: solid 1px rgb(199, 199, 199);
+    border-top: solid 1px $color-third;
     &__section{
         display: flex;
         flex-direction: row-reverse;
@@ -23,7 +23,7 @@
     &__title{
         font-size: 3.6rem;
         font-family: $font-subtitle-header;
-        color: white;
+        color: $color-primary;
         width: 450px;
         text-align: center;
         &--span{
@@ -37,7 +37,7 @@
         font-family: $font-title-header;
         text-transform: uppercase;
         font-size: 2rem;
-        color: white;
+        color: $color-primary;
         
 
     }
@@ -50,16 +50,16 @@
     gap: 15px;
 
     &__container{
-        border: solid 2px rgb(159, 47, 20);
+        border: solid 2px $color-border;
         border-radius: 30px;
         &--title{
-            border-bottom: solid 2px rgb(159, 47, 20);
+            border-bottom: solid 2px $color-border;
             padding: 5px;
             text-align: center;
             font-family: $font-title-header;
             font-size: 2.2rem;
             font-weight: 400;
-            color: white;
+            color: $color-primary;
             
             
         }
@@ -94,8 +94,8 @@
     height: 350px;
     padding: 0px 15px;
     border-radius: 15px;
-    border: solid 1px white;
-    color: white;
+    border: solid 1px $color-primary;
+    color: $color-primary;
     
     &__title{
         font-size: 1.4rem;
@@ -109,8 +109,8 @@
         height: 210px;
     }
     &--favorite{
-        background-color: white;
-        color: black;
+        background-color: $color-primary;
+        color: $color-secondary;
         
     }
 }
@@ -124,7 +124,7 @@
         font-size: 1.8rem;
         text-decoration: underline;
         font-family: $font-subtitle-header;
-        color: rgb(62, 62, 62);
+        color: $color-third;
     }
     &__input{
         width: 250px;
@@ -132,22 +132,22 @@
         font-family: $font-main;
         padding-left: 10px;
         border-radius: 10px;
-        border: solid 1px white;
-        color: rgb(62, 62, 62);
+        border: solid 1px $color-primary;
+        color: $color-third;
     }
     &__btn{
         width: 80px;
         font-size: 1.8rem;
         font-weight: 500;
         font-family: $font-subtitle-header;
-        background-color: white;
+        background-color: $color-primary;
         border-radius: 40px;
-        border: solid 1px white;
-        color: rgb(62, 62, 62);
+        border: solid 1px $color-primary;
+        color: $color-secondary;
         &:hover{
             width: 100px;
-            background-color: rgb(159, 47, 20);
-            color: white;
+            background-color: $color-border;
+            color: $color-primary;
         }
     }
 }
