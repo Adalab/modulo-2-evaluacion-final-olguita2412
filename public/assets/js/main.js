@@ -34,7 +34,10 @@ const renderSeries = (arraySeries) => {
         } else {
         html += `<img class="serie__img" src="${oneSerie.images.jpg.image_url}" />`;
          }
-        html += `</li>`;
+         html += `<div class="serie__button--container"><button class="serie__button"><i class="fa-solid fa-heart-circle-plus serie__button--icon-plus fa-2x"></i></button>`;
+         html += `<button class="serie__button"><i class="fa-solid fa-heart-circle-xmark serie__button--icon-remove fa-2x"></i></button>`;
+         html += `<button class="serie__button"><i class="fa-solid fa-heart serie__button--icon fa-2x"></i></button></div>`;
+         html += `</li>`;
     }
     return html;
 };

@@ -91,6 +91,29 @@ li {
   padding: 0px 15px;
   border-radius: 15px;
   border: solid 1px #fff2f2; }
+  .serie--search {
+    color: #fff2f2; }
+    .serie--search:hover {
+      width: 200px;
+      background-color: #fff2f2;
+      color: #434242;
+      transform: translateY(-10px); }
+      .serie--search:hover .serie__button--icon-plus {
+        color: #ac0404; }
+  .serie--favorite {
+    background-color: #fff2f2;
+    color: #434242; }
+    .serie--favorite .serie__button--icon {
+      color: #ac0404; }
+    .serie--favorite:hover {
+      width: 200px;
+      background-color: transparent;
+      color: #fff2f2;
+      transform: translateY(-10px); }
+      .serie--favorite:hover .serie__button--icon-remove {
+        color: #ac0404; }
+      .serie--favorite:hover .serie__button--icon {
+        color: transparent; }
   .serie__title {
     font-size: 1.4rem;
     font-family: "Indie Flower", cursive;
@@ -99,21 +122,15 @@ li {
   .serie__img {
     width: 150px;
     height: 210px; }
-  .serie--search {
-    color: #fff2f2; }
-    .serie--search:hover {
-      width: 200px;
-      background-color: #fff2f2;
-      color: #434242;
-      transform: translateY(-10px); }
-  .serie--favorite {
-    background-color: #fff2f2;
-    color: #434242; }
-    .serie--favorite:hover {
-      width: 200px;
-      background-color: transparent;
-      color: #fff2f2;
-      transform: translateY(-10px); }
+  .serie__button {
+    border: transparent;
+    background: transparent; }
+    .serie__button--icon {
+      color: transparent; }
+    .serie__button--icon-plus {
+      color: transparent; }
+    .serie__button--icon-remove {
+      color: transparent; }
 
 .form {
   width: 60vw;

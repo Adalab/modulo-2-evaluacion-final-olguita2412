@@ -98,8 +98,38 @@
     padding: 0px 15px;
     border-radius: 15px;
     border: solid 1px $color-primary;
-    
-    
+    &--search{
+        color: $color-primary;
+        &:hover{
+            width: 200px;
+            background-color: $color-primary;
+            color: $color-secondary;
+            transform: translateY(-10px);
+            .serie__button--icon-plus{
+                color: rgb(172, 4, 4);
+            }
+        }
+    }
+    &--favorite{
+        background-color: $color-primary;
+        color: $color-secondary;
+        .serie__button--icon{
+            color: rgb(172, 4, 4);
+        }
+        &:hover{
+            width: 200px;
+            background-color:transparent;
+            color: $color-primary;
+            transform: translateY(-10px);
+            .serie__button--icon-remove{
+                color: rgb(172, 4, 4);
+            }
+            .serie__button--icon{
+                color: transparent;
+            }
+        }
+        
+    }
     &__title{
         font-size: 1.4rem;
         font-family: $font-main;
@@ -111,26 +141,21 @@
         width: 150px;
         height: 210px;
     }
-    &--search{
-        color: $color-primary;
-        &:hover{
-            width: 200px;
-            background-color: $color-primary;
-            color: $color-secondary;
-            transform: translateY(-10px);
+    &__button{
+        border: transparent;
+        background: transparent;
+        &--icon{
+            color: transparent;
+            
+        }
+        &--icon-plus{
+            color: transparent;
+        }
+        &--icon-remove{
+            color: transparent;
         }
     }
-    &--favorite{
-        background-color: $color-primary;
-        color: $color-secondary;
-        &:hover{
-            width: 200px;
-            background-color:transparent;
-            color: $color-primary;
-            transform: translateY(-10px);
-        }
-        
-    }
+
 }
 
 .form {
