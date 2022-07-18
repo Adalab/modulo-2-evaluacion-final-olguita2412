@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/sass,node,bower,macos
 
 # Bower
-bower_components
+.bower_components
 .bower-cache
 .bower-registry
 .bower-tmp
@@ -41,7 +41,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directories
-node_modules/
+node_modules
 
 # Sass
 .sass-cache/
