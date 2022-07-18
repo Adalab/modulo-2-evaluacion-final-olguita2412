@@ -3,12 +3,14 @@
 ---
 
 <div align="center">
-   Solution for exrcise of module 2's final evaluation by Olga Rodríguez Garrucho at [Adalab](https://adalab.es/) .
+   Solution for exrcise of module 2's final evaluation by Olga Rodríguez Garrucho at <a href="https://adalab.es/">
+     Adalab
+    </a>.
 </div>
 
 <div align="center">
   <h3>
-    <a href="http://beta.adalab.es/modulo-2-evaluacion-final-olguita2412/">
+    <a href="https://www.youtube.com/watch?v=Ad86H9Vgx6g&ab_channel=OlguiitaRodriguez">
       Demo
     </a>
     <span> | </span>
@@ -33,8 +35,21 @@
 
 ## General Info
 
-Solution for exercise of module 2´s final evaluation by Olga Rodríguez Garrucho. Develop a web application to search for anime series, which allows us to de/marcate the series as favourites and save them in.
+Solution for exercise of module 2´s final evaluation by Olga Rodríguez Garrucho.
+
+Develop a web application to search for anime series, which allows us to de/marcate the series as favourites and save them in.
+
 Use of HTML, SASS and JS.
+
+The application has an input text for write the search and a button to search it. When the user write the search, in the right list (result list) appears the series of the request to API.
+
+If the user wants to save like favourite a serie, only just have to click on it. This will change color text and background color and appears in the left list (favourites list). These favourites serie will be stored in the local storage. Also, these favourites series can be deleted from favourites list by clicking.
+
+When loading the page, the local storage is inspected and if it isn't empty, the favourites list will contains the favourites serie and the rest favourites button. Else if it's empty, the favourites list will not contains anything.
+
+The reset button cleans the search input and the result list.
+
+The reset favourites button cleans the favourites list, it cleans the local storage and hidden it.
 
 ### Web responsive mobile:
 
@@ -46,9 +61,7 @@ Use of HTML, SASS and JS.
 
 ### Demo:
 
-<iframe width="800" height = "450"
-src="https://youtu.be/Ad86H9Vgx6g">
-</iframe>
+[![Demo](./src/images/demo.png)](https://www.youtube.com/watch?v=Ad86H9Vgx6g&ab_channel=OlguiitaRodriguez)
 
 ---
 
