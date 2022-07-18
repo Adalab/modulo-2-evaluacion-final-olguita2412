@@ -20,6 +20,8 @@ const handleResetFavorites = () => {
   renderSeriesFavorites();
   localStorage.clear('favorites');
   resetFavorites(html);
+  let inputValue = inputSearch.value;
+  getDataAPI(inputValue);
 
 };
 

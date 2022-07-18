@@ -2,8 +2,12 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 25px;
+    @media all and(min-width:768px){
+        flex-direction: row;
+    }
     &__img{
         width: 20vw;
     }
@@ -16,6 +20,14 @@
             font-family: $font-title-header;
             text-transform: uppercase;
             text-align: center;
+            animation-name: titleAnimation;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: initial;
         }
         &--subtitle{
             font-family: $font-subtitle-header;
@@ -27,4 +39,19 @@
         
     }
     
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    20%,80% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
 }
