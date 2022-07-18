@@ -33,8 +33,20 @@
 
 ## General Info
 
-Solution for exercise of module 2´s final evaluation by Olga Rodríguez Garrucho. Develop a web application to search for anime series, which allows us to de/marcate the series as favourites and save them in. Use of HTML, CSS and JavaScripts.
-Use HTML, SASS and JS.
+Solution for exercise of module 2´s final evaluation by Olga Rodríguez Garrucho. Develop a web application to search for anime series, which allows us to de/marcate the series as favourites and save them in.
+Use of HTML, SASS and JS.
+
+### Web responsive mobile:
+
+![Mobile](./src/images/mobile.png)
+
+### Web responsive mobile:
+
+![Desktop](./src/images/desktop.png)
+
+### Demo:
+
+![Demo](./src/images/demo.mov)
 
 ---
 
