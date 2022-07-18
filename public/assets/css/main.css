@@ -55,8 +55,13 @@ li {
   padding: 10px; }
   .list__container {
     border: solid 2px #9f2f14;
-    border-radius: 30px; }
+    border-radius: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     .list__container--title {
+      width: 100%;
       border-bottom: solid 2px #9f2f14;
       padding: 5px;
       text-align: center;
@@ -80,6 +85,15 @@ li {
     width: 33vw;
     padding: 15px 5px;
     gap: 15px 5px; }
+    .list__favorites--reset {
+      background-color: #434242;
+      border: #434242;
+      border-radius: 15px;
+      padding: 10px 7px;
+      color: #fff2f2;
+      font-size: 1.4rem;
+      font-family: "Indie Flower", cursive;
+      width: 200px; }
 
 .serie {
   display: flex;
@@ -163,6 +177,9 @@ li {
       width: 100px;
       background-color: #9f2f14;
       color: #fff2f2; }
+
+.hidden {
+  display: none; }
 
 .header {
   min-height: 100vh;

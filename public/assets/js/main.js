@@ -7,13 +7,23 @@ const btnSearch = document.querySelector('.js-btn-search');
 const btnReset = document.querySelector('.js-btn-reset');
 const listSearch = document.querySelector('.js-list-search');
 const listFavorites = document.querySelector('.js-list-favorites');
+const btnResetFavorites = document.querySelector('.js-btn-reset-favorites');
 
 // VARIABLES GLOBALES
 
 let series = [];
 let favorites = [];
+const dataLS = JSON.parse(localStorage.getItem('favorites'));
 
 // FUNCIONES
+
+const resetFavorites = (html) => {
+    if (html !== ''){
+        btnResetFavorites.classList.remove('hidden');
+    } else {
+        btnResetFavorites.classList.add('hidden');
+    }
+}
 
 const renderSeries = (arraySeries) => {
     let html = '';
@@ -51,8 +61,7 @@ const renderSeries = (arraySeries) => {
  const renderSeriesFavorites = () => { 
     let html = renderSeries(favorites);
     listFavorites.innerHTML = html;
-    //listenerSerie();
-    console.log(favorites);
+    resetFavorites(html);
     localStorage.setItem('favorites', JSON.stringify(favorites));
     renderSeriesSearch();
  }
@@ -64,10 +73,8 @@ const handleSearch = (event) => {
     getDataAPI(inputValue);
 }
 
-btnSearch.addEventListener('click', handleSearch);
-inputSearch.addEventListener('keyup', handleSearch);
-
 const getDataAPI = (inputValue) => {
+    if (inputValue !== '') {
     fetch (`https://api.jikan.moe/v4/anime?q=${inputValue}`)
         .then((response) => response.json())
         .then ((data) => {
@@ -75,16 +82,17 @@ const getDataAPI = (inputValue) => {
             renderSeriesSearch();
             
     })
+    } else {
+        let html = '';
+        listSearch.innerHTML = html;
+    }
 }
 
 const handleClick = (event) => {
    
     const idSelected = parseInt(event.currentTarget.id);
     const serieFound = series.find((oneSerie) => oneSerie.mal_id === idSelected);
-   
     const favoriteFound = favorites.findIndex((fav) => fav.mal_id === idSelected);
-
-    
    
     if (favoriteFound === -1){
         favorites.push(serieFound);
@@ -93,7 +101,19 @@ const handleClick = (event) => {
     }
     
     renderSeriesFavorites();
-    
+}
+
+const handleResetFavorites = () => {
+    let html = '';
+    listFavorites.innerHTML = html;
+    localStorage.clear('favorites');
+    resetFavorites(html);
+}
+
+const handleReset = () => {
+    let inputValue = inputSearch.value;
+    inputValue = '';
+    getDataAPI(inputValue);
 }
 
 function listenerSerie() {
@@ -103,20 +123,22 @@ function listenerSerie() {
     }
 }
 
-const dataLS = JSON.parse(localStorage.getItem('favorites'));
-
 function onLoad() {
-    console.log(favorites);
     if (dataLS !== null) {
         favorites = dataLS;
-        
-        console.log(favorites);
         renderSeriesFavorites();
     } else {
         listFavorites.innerHTML = '';
     }
-    
 }
 
 onLoad();
+
+
+//EVENTOS
+
+btnSearch.addEventListener('click', handleSearch);
+inputSearch.addEventListener('keyup', handleSearch);
+btnResetFavorites.addEventListener('click', handleResetFavorites);
+btnReset.addEventListener('click', handleReset);
 //# sourceMappingURL=main.js.map
