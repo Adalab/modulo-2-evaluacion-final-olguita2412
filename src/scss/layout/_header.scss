@@ -4,17 +4,18 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
-    background-image: linear-gradient(to bottom, (rgb(255, 136, 0),rgb(224, 180, 8), rgb(159, 47, 20),rgb(224, 180, 8),rgb(255, 136, 0),rgb(224, 180, 8),rgb(159, 47, 20)));
     &__img{
         width: 20vw;
     }
     &__section{
         color: white;
-        animation: infinite;
+        
+        
         &--title{
             font-size: 4rem;
             font-family: $font-title-header;
             text-transform: uppercase;
+            text-align: center;
         }
         &--subtitle{
             font-family: $font-subtitle-header;

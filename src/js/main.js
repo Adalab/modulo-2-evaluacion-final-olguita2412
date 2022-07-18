@@ -27,12 +27,12 @@ const renderSeries = (arraySeries) => {
             classFavorite = '';
         }
         html += `<li class="js-serie serie ${classFavorite}" id="${oneSerie.mal_id}">`;
-        html += `<h2>${oneSerie.title}</h2>`;
+        html += `<h2 class="serie__title">${oneSerie.title}</h2>`;
         if (oneSerie.images.jpg.image_url === "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png"){
             oneSerie.images.jpg.image_url = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
-            html += `<img src="${oneSerie.images.jpg.image_url}" />`;
+            html += `<img class="serie__img" src="${oneSerie.images.jpg.image_url}" />`;
         } else {
-        html += `<img src="${oneSerie.images.jpg.image_url}" />`;
+        html += `<img class="serie__img" src="${oneSerie.images.jpg.image_url}" />`;
          }
         html += `</li>`;
     }

@@ -12,37 +12,112 @@ a {
 li {
   list-style: none; }
 
+.main {
+  padding: 20px 10px; }
+
 .list {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  gap: 15px; }
+  .list__container {
+    border: solid 2px #9f2f14;
+    border-radius: 30px; }
+    .list__container--title {
+      border-bottom: solid 2px #9f2f14;
+      padding: 5px;
+      text-align: center;
+      font-family: "Cormorant SC", serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white; }
   .list__search {
-    width: 50vw; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60vw;
+    padding: 10px;
+    gap: 7px; }
   .list__favorites {
-    width: 50vw; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 35vw;
+    padding: 10px;
+    gap: 7px; }
 
-.serie--favorite {
-  background-color: black;
+.serie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 180px;
+  height: 350px;
+  padding: 0px 15px;
+  border-radius: 15px;
+  border: solid 1px white;
   color: white; }
+  .serie__title {
+    font-size: 1.4rem;
+    font-family: "Indie Flower", cursive;
+    height: 80px;
+    text-align: center; }
+  .serie__img {
+    width: 150px;
+    height: 210px; }
+  .serie--favorite {
+    background-color: white;
+    color: black; }
 
+/*.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    overflow: hidden;
+    padding: 10px;
+    transition: 0.25s all;
+    width: 30vw;
+    //box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+      0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+      0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+    text-align: center;
+  }
+  
+  .card_img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card_title {
+    font-weight: 600;
+    padding: 10px;
+  }*/
 .header {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  background-image: linear-gradient(to bottom, #ff8800, #e0b408, #9f2f14, #e0b408, #ff8800, #e0b408, #9f2f14); }
+  gap: 25px; }
   .header__img {
     width: 20vw; }
   .header__section {
-    color: white;
-    -webkit-animation: infinite;
-    animation: infinite; }
+    color: white; }
     .header__section--title {
       font-size: 4rem;
       font-family: "Rubik Moonrocks", cursive;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center; }
     .header__section--subtitle {
       font-family: "Cormorant SC", serif;
       font-size: 2rem; }
+
+.body {
+  background-image: linear-gradient(to bottom, #ff8800, #e0b408, #9f2f14, #e0b408, #ff8800, #e0b408, #9f2f14);
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=main.css.map */

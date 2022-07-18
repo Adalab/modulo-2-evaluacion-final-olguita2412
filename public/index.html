@@ -16,30 +16,37 @@
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 
-<body>
+<body class="body">
   <header class="header">
-    <a href="./index.html#main">
-      <img class="header__img" src="./assets/images/pikachu.png" alt="Pikachu">
-    </a>
-    <div class="header__section">
-      <h2 class="header__section--title">Pikaseries</h2>
-      <h4 class="header__section--subtitle">tu buscador de series anime</h4>
-    </div>
+      <a href="./index.html#main">
+          <img class="header__img" src="./assets/images/pikachu.png" alt="Pikachu">
+      </a>
+      <div class="header__section">
+          <h2 class="header__section--title">Miranime</h2>
+          <h4 class="header__section--subtitle">tu buscador de series anime</h4>
+      </div>
   </header>
 
-  <main id="main">
-    <h1>Buscador de <span>series</span> de <span>anime</span></h1>
-    <form action="">
-      <input type="text" class="js-input" name="search" id="search" placeholder="Ej: Naruto">
-      <input type="submit" value="Buscar" class="js-btn-search">
-      <input type="button" value="Reset" class="js-btn-reset">
-    </form>
-    <div class="list">
-      <ul class="js-list-favorites list__favorites">
-      </ul>
-      <ul class="js-list-search list__search">
-      </ul>
-    </div>
+  <main class="main" id="main">
+      <h1>Buscador de <span>series</span> de <span>anime</span></h1>
+      <form action="">
+          <input type="text" class="js-input" name="search" id="search" placeholder="Ej: Naruto">
+          <input type="submit" value="Buscar" class="js-btn-search">
+          <input type="button" value="Reset" class="js-btn-reset">
+      </form>
+      <div class="list">
+          <div class="list__container">
+              <h2 class="list__container--title">Favoritas</h2>
+              <ul class="js-list-favorites list__favorites">
+              </ul>
+          </div>
+
+          <div class="list__container">
+              <h2 class="list__container--title">Resultado</h2>
+              <ul class="js-list-search list__search">
+              </ul>
+          </div>
+      </div>
   </main>
 
   <footer>
