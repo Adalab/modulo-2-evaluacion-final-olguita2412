@@ -15,7 +15,29 @@ let series = [];
 let favorites = [];
 const dataLS = JSON.parse(localStorage.getItem('favorites'));
 
-// FUNCIONES
+
+
+'use strict';
+
+// FUNCIÓN PARA OBTENER DATOS DE LA API
+
+const getDataAPI = (inputValue) => {
+    if (inputValue !== '') {
+    fetch (`https://api.jikan.moe/v4/anime?q=${inputValue}`)
+        .then((response) => response.json())
+        .then ((data) => {
+            series = data.data;
+            renderSeriesSearch();
+            
+    })
+    } else {
+        let html = '';
+        listSearch.innerHTML = html;
+    }
+};
+'use strict';
+
+// FUNCIÓN PARA RESETEAR FAVORITES
 
 const resetFavorites = (html) => {
     if (html !== ''){
@@ -23,14 +45,33 @@ const resetFavorites = (html) => {
     } else {
         btnResetFavorites.classList.add('hidden');
     }
-}
+};
+
+
+// FUNCIÓN HANDLE PARA EL BOTÓN RESET FAVORITES
+
+const handleResetFavorites = () => {
+    let html = '';
+    listFavorites.innerHTML = html;
+    localStorage.clear('favorites');
+    resetFavorites(html);
+};
+
+
+// LISTENER PARA EL BOTÓN RESET FAVORITES
+
+btnResetFavorites.addEventListener('click', handleResetFavorites);
+
+'use strict';
+
+
+// FUNCIÓN RENDER GLOBAL
 
 const renderSeries = (arraySeries) => {
     let html = '';
     let classFavorite = '';
     for (const oneSerie of arraySeries) {
         const favoritesFoundIndex = favorites.findIndex((fav) => fav.mal_id === oneSerie.mal_id);
-        console.log(favoritesFoundIndex);
         if (favoritesFoundIndex !== -1){
             classFavorite = '--favorite';
         } else {
@@ -52,41 +93,8 @@ const renderSeries = (arraySeries) => {
     return html;
 };
 
- const renderSeriesSearch = () => {
-    let html= renderSeries(series);
-    listSearch.innerHTML = html;
-    listenerSerie()
- }
 
- const renderSeriesFavorites = () => { 
-    let html = renderSeries(favorites);
-    listFavorites.innerHTML = html;
-    resetFavorites(html);
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    renderSeriesSearch();
- }
-
-
-const handleSearch = (event) => {
-    event.preventDefault();
-    const inputValue = inputSearch.value.toLowerCase();
-    getDataAPI(inputValue);
-}
-
-const getDataAPI = (inputValue) => {
-    if (inputValue !== '') {
-    fetch (`https://api.jikan.moe/v4/anime?q=${inputValue}`)
-        .then((response) => response.json())
-        .then ((data) => {
-            series = data.data;
-            renderSeriesSearch();
-            
-    })
-    } else {
-        let html = '';
-        listSearch.innerHTML = html;
-    }
-}
+// FUNCIÓN HANDLE DEL LISTENER DE CADA LI
 
 const handleClick = (event) => {
    
@@ -101,44 +109,75 @@ const handleClick = (event) => {
     }
     
     renderSeriesFavorites();
-}
+};
 
-const handleResetFavorites = () => {
-    let html = '';
-    listFavorites.innerHTML = html;
-    localStorage.clear('favorites');
-    resetFavorites(html);
-}
 
-const handleReset = () => {
-    let inputValue = inputSearch.value;
-    inputValue = '';
-    getDataAPI(inputValue);
-}
+// LISTENER DE CADA LI
 
 function listenerSerie() {
     const liSeries = document.querySelectorAll('.js-serie');
     for (const li of liSeries) {
         li.addEventListener('click', handleClick);
     }
-}
+};
 
-function onLoad() {
+// FUNCIÓN RENDER ESPECÍFICA DE SEARCH
+
+const renderSeriesSearch = () => {
+    let html= renderSeries(series);
+    listSearch.innerHTML = html;
+    listenerSerie()
+ };
+
+
+ // FUNCIÓN RENDER ESPECÍFICA DE FAVORITES
+
+ const renderSeriesFavorites = () => { 
+    let html = renderSeries(favorites);
+    listFavorites.innerHTML = html;
+    resetFavorites(html);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    renderSeriesSearch();
+ };
+
+ // FUNCIÓN PARA CARGAR DATOS DE FAVORITES AL INICIAR LA PÁGINA
+ 
+ function onLoad() {
     if (dataLS !== null) {
         favorites = dataLS;
         renderSeriesFavorites();
     } else {
         listFavorites.innerHTML = '';
     }
-}
+};
 
 onLoad();
+'use strict';
+
+// FUNCIÓN PARA RESETEAR EL INPUT Y LA BÚSQUEDA
+
+const handleReset = () => {
+    let inputValue = inputSearch.value;
+    inputValue = '';
+    getDataAPI(inputValue);
+};
+
+btnReset.addEventListener('click', handleReset);
+'use strict';
+
+// FUNCIÓN HANDLE PARA BUSCAR
+
+const handleSearch = (event) => {
+    event.preventDefault();
+    const inputValue = inputSearch.value.toLowerCase();
+    getDataAPI(inputValue);
+};
 
 
-//EVENTOS
+// LISTENER PARA BOTÓN BUSCAR Y PARA EL EVENTO DE KEYUP
 
 btnSearch.addEventListener('click', handleSearch);
 inputSearch.addEventListener('keyup', handleSearch);
-btnResetFavorites.addEventListener('click', handleResetFavorites);
-btnReset.addEventListener('click', handleReset);
+
+
 //# sourceMappingURL=main.js.map
