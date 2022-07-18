@@ -2,6 +2,8 @@
 
 ---
 
+---
+
 <div align="center">
    Solution for exrcise of module 2's final evaluation by Olga Rodríguez Garrucho at [Adalab](https://adalab.es/) .
 </div>
@@ -17,8 +19,6 @@
     </a>
   </h3>
 </div>
-
----
 
 ---
 
