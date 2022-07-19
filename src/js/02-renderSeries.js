@@ -20,7 +20,7 @@ const renderSeriesSearch = () => {
     html += `<h2 class="serie__title">${oneSerie.title}</h2>`;
     if (oneSerie.images.jpg.image_url === 'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png'){
       // eslint-disable-next-line camelcase
-      oneSerie.images.jpg.image_url = 'https://via.placeholder.com/200/a52a2a/ffffff/?text=not+image+found';
+      oneSerie.images.jpg.image_url = 'https://via.placeholder.com/200/a52a2a/ffffff/?text=NOT+IMAGE';
       html += `<img class="serie__img" src="${oneSerie.images.jpg.image_url}" />`;
     } else {
       html += `<img class="serie__img" src="${oneSerie.images.jpg.image_url}" />`;
@@ -43,7 +43,7 @@ const renderSeriesFavourites = () => {
     html += `<h2 class="favourite__title">${oneSerie.title}</h2>`;
     if (oneSerie.images.jpg.image_url === 'https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png') {
       // eslint-disable-next-line camelcase
-      oneSerie.images.jpg.image_url = 'https://via.placeholder.com/200/a52a2a/ffffff/?text=not+image+found';
+      oneSerie.images.jpg.image_url = 'https://via.placeholder.com/200/a52a2a/ffffff/?text=NOT+IMAGE';
       html += `<img class="favourite__img" src="${oneSerie.images.jpg.image_url}" />`;
     } else {
       html += `<img class="favourite__img" src="${oneSerie.images.jpg.image_url}" />`;
