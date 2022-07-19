@@ -55,7 +55,7 @@ The reset favourites button cleans the favourites list, it cleans the local stor
 
 ![Mobile](./src/images/mobile.png)
 
-### Web responsive mobile:
+### Web responsive desktop:
 
 ![Desktop](./src/images/desktop.png)
 
