@@ -1,31 +1,31 @@
 /* eslint-disable no-undef */
 'use strict';
 
-// FUNCIÓN PARA RESETEAR FAVORITES
+// FUNCIÓN PARA RESETEAR favourites
 
-const resetFavorites = (html) => {
+const resetFavourites = (html) => {
   if (html !== ''){
-    btnResetFavorites.classList.remove('hidden');
+    btnResetFavourites.classList.remove('hidden');
   } else {
-    btnResetFavorites.classList.add('hidden');
+    btnResetFavourites.classList.add('hidden');
   }
 };
 
 
-// FUNCIÓN HANDLE PARA EL BOTÓN RESET FAVORITES
+// FUNCIÓN HANDLE PARA EL BOTÓN RESET favourites
 
-const handleResetFavorites = () => {
-  favorites = [];
+const handleResetFavourites = () => {
+  favourites = [];
   let html= '';
-  renderSeriesFavorites();
-  localStorage.clear('favorites');
-  resetFavorites(html);
+  renderSeriesFavourites();
+  localStorage.clear('favourites');
+  resetFavourites(html);
   let inputValue = inputSearch.value;
   getDataAPI(inputValue);
 
 };
 
 
-// LISTENER PARA EL BOTÓN RESET FAVORITES
+// LISTENER PARA EL BOTÓN RESET favourites
 
-btnResetFavorites.addEventListener('click', handleResetFavorites);
+btnResetFavourites.addEventListener('click', handleResetFavourites);

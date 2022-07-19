@@ -3,10 +3,10 @@
 
 function onLoad() {
   if (dataLS !== null) {
-    favorites = dataLS;
-    renderSeriesFavorites();
+    favourites = dataLS;
+    renderSeriesFavourites();
   } else {
-    listFavorites.innerHTML = '';
+    listfavourites.innerHTML = '';
   }
 }
 

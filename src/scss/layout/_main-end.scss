@@ -3,8 +3,6 @@
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
-
     &__container{
         border: solid 2px $color-border;
         border-radius: 20px;
@@ -30,27 +28,30 @@
             
         }
     }
-    
     &__search{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 60vw;
-        padding: 15px 5px;
+        width: 52vw;
+        padding: 5px;
         gap: 15px 5px;
         @media all and(min-width:768px){
             width: 63vw;
+            padding: 15px 5px;
         }
     }
-    &__favorites{
+    &__favourites{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         justify-content: space-around;
         width: 33vw;
         padding: 15px 5px;
-        gap: 15px 5px;
+        gap: 15px;
+        @media all and(min-width:768px){
+            align-items: center;
+        }
         &--reset{
             background-color: $color-secondary;
             border: $color-secondary;
@@ -74,9 +75,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100px;
+    width: 90px;
     height: 240px;
     padding: 0px 15px;
+    padding-top: 10px;
     border-radius: 15px;
     border: solid 1px $color-primary;
     @media all and(min-width:768px){
@@ -98,7 +100,7 @@
             }
         }
     }
-    &--favorite{
+    &--favourite{
         background-color: $color-primary;
         color: $color-secondary;
         .serie__button--icon{
@@ -134,7 +136,7 @@
         
     }
     &__img{
-        width: 90px;
+        width: 80px;
         height: 120px;
         @media all and(min-width:768px){
             width: 150px;
@@ -144,12 +146,140 @@
     &__button{
         border: transparent;
         background: transparent;
+        &--container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 5px;
+            gap: 10px;
+            @media all and(min-width:768px){
+                gap: 30px;
+            }
+        }
         &--icon{
             color: transparent;
-            
         }
         &--icon-plus{
             color: transparent;
+        }
+        &--icon-remove{
+            color: transparent;
+        }
+    }
+
+}
+.favourite{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 0.5fr 0.25fr;
+    padding: 10px;
+    width: 110px;
+    height: 260px;
+    border-radius: 15px;
+    border: solid 1px $color-third;
+    background-color: #fbd87f;
+    @media all and(min-width:768px){
+        width: 250px;
+        height: 200px;
+        grid-template-columns: 0.25fr 1.75fr;
+        grid-template-rows: 0.85fr 0.15fr;
+        border-radius: 30px;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    @media all and(min-width:1024px){
+        width: 320px;
+        height: 190px;
+        grid-template-columns: 0.3fr 1.25fr 0.15fr;
+        grid-template-rows: 1fr;
+        border-radius: 30px;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    &:hover{
+        width: 120px;
+        background-color:transparent;
+        color: $color-primary;
+        border: solid 2px $color-primary;
+        transform: translateY(-10px);
+        @media all and(min-width:768px){
+            width: 260px;
+        }
+        @media all and(min-width:1024px){
+            width: 330px;
+        }
+        .favourite__button--icon-remove{
+            color: rgb(172, 4, 4);
+        }
+        .favourite__button--icon{
+            color: transparent;
+        }
+    }
+    &__title{
+        font-size: 1.2rem;
+        font-family: $font-main;
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media all and(min-width:768px){
+            font-size: 2rem;
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            height: 180px;
+        } 
+        @media all and(min-width:1024px){
+            font-size: 1.8rem;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            height: 165px;
+        } 
+    }
+    &__img{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 90px;
+        height: 110px;
+        border: 1.5px solid $color-border;
+        @media all and(min-width:768px){
+            width: 100px;
+            height: 150px;
+        }
+        @media all and(min-width:1024px){
+            width: 110px;
+            height: 165px;
+        }
+    }
+    &__button{
+        border: transparent;
+        background: transparent;
+        &--container{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: right;
+            gap: 5px;
+            @media all and(min-width:768px){
+                flex-direction: row-reverse;
+                justify-content: left;
+                gap: 20px;
+                grid-row: 2 / 3;
+            }
+            @media all and(min-width:1024px){
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+                padding-top: 90px;
+            }
+        }
+        &--icon{
+            color: rgb(172, 4, 4);
         }
         &--icon-remove{
             color: transparent;
